@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="Autonomous Robot for pallet tracking.SLDASM">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-4.2862E-07 -0.0018753 0.11305"
+        rpy="0 0 0" />
+      <mass
+        value="13.126" />
+      <inertia
+        ixx="0.11855"
+        ixy="1.2736E-06"
+        ixz="1.0357E-06"
+        iyy="0.11904"
+        iyz="2.7628E-06"
+        izz="0.22928" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Autonomous Robot for pallet tracking.SLDASM/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Autonomous Robot for pallet tracking.SLDASM/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rpi_base">
+    <inertial>
+      <origin
+        xyz="-0.0120064667025884 -0.00471627505060544 0.0162632662835169"
+        rpy="0 0 0" />
+      <mass
+        value="13.5787380713045" />
+      <inertia
+        ixx="0.314100204728485"
+        ixy="-0.0639211824079832"
+        ixz="-0.0651755801900691"
+        iyy="0.562868178518788"
+        iyz="-0.0138265935074047"
+        izz="0.554340574545811" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Autonomous Robot for pallet tracking.SLDASM/meshes/rpi_base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://Autonomous Robot for pallet tracking.SLDASM/meshes/rpi_base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rpi_base"
+    type="revolute">
+    <origin
+      xyz="0.007 0 0.1336"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="rpi_base" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
