@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="service_robot_urdf">
+  <link
+    name="base_footprint">
+    <inertial>
+      <origin
+        xyz="0.39485 -0.0052182 0.008626"
+        rpy="0 0 0" />
+      <mass
+        value="29.888" />
+      <inertia
+        ixx="1.1402"
+        ixy="-0.0017646"
+        ixz="0.00025221"
+        iyy="0.88941"
+        iyz="2.731E-06"
+        izz="0.89414" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/base_footprint.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/base_footprint.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0086259616538904 0.00521822249715609 0.310851288819772"
+        rpy="0 0 0" />
+      <mass
+        value="29.8878371864307" />
+      <inertia
+        ixx="0.894135181812627"
+        ixy="-2.73104975419701E-06"
+        ixz="0.000252209744103177"
+        iyy="0.889414954605538"
+        iyz="0.00176456036828637"
+        izz="1.14020925293907" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_link_jt"
+    type="fixed">
+    <origin
+      xyz="0.084 0 0"
+      rpy="0 -1.5708 0" />
+    <parent
+      link="base_footprint" />
+    <child
+      link="base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="scan">
+    <inertial>
+      <origin
+        xyz="-0.00578430409330077 -0.000495122459051256 0.000638309703434425"
+        rpy="0 0 0" />
+      <mass
+        value="0.14299417446786" />
+      <inertia
+        ixx="4.62767613446328E-05"
+        ixy="-8.53626708103692E-07"
+        ixz="-3.62184439035664E-06"
+        iyy="7.34746282541056E-05"
+        iyz="2.04285506164686E-07"
+        izz="0.000107960205150674" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/scan.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.101960784313725 0.101960784313725 0.101960784313725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/scan.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="scan_jt"
+    type="fixed">
+    <origin
+      xyz="0 0 0.1744"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="scan" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="IMU">
+    <inertial>
+      <origin
+        xyz="-0.0160966889369092 6.74922376875386E-08 3.71943995602919E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0158475098031171" />
+      <inertia
+        ixx="5.98961222534219E-06"
+        ixy="-1.06198640373641E-11"
+        ixz="-5.61862447694844E-12"
+        iyy="4.0301198501578E-06"
+        iyz="-1.14934183746755E-11"
+        izz="3.97025054959764E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/IMU.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/IMU.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="IMU_jt"
+    type="fixed">
+    <origin
+      xyz="0.24998 0 0.042103"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="IMU" />
+    <axis
+      xyz="1 0 0" />
+  </joint>
+  <link
+    name="right_wheel">
+    <inertial>
+      <origin
+        xyz="-4.97844232505429E-09 -3.0535426409628E-09 -0.0131236838725217"
+        rpy="0 0 0" />
+      <mass
+        value="0.124852697022667" />
+      <inertia
+        ixx="0.000144756546502386"
+        ixy="-1.25987389982755E-12"
+        ixz="3.02221907233422E-12"
+        iyy="0.000144756543553378"
+        iyz="9.3608475824482E-13"
+        izz="0.000278178176215626" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/right_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/right_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_jt"
+    type="fixed">
+    <origin
+      xyz="-0.16 -0.28785 -0.0265"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="left_wheel">
+    <inertial>
+      <origin
+        xyz="3.05353986540524E-09 -4.97882335359634E-09 -0.0131236838727548"
+        rpy="0 0 0" />
+      <mass
+        value="0.124852697022668" />
+      <inertia
+        ixx="0.000144756543553379"
+        ixy="1.25987383795358E-12"
+        ixz="-9.36085065145622E-13"
+        iyy="0.000144756546502386"
+        iyz="3.02612035324669E-12"
+        izz="0.000278178176215627" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/left_wheel.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://service_robot_urdf/meshes/left_wheel.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_jt"
+    type="fixed">
+    <origin
+      xyz="-0.16 0.28785 -0.0265"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>
